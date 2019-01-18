@@ -7,12 +7,12 @@ import argparse
 #grab arguments from command line
 parser = argparse.ArgumentParser(description='Regularly check for a change in the first paragraph tag of a webpage')
 parser.add_argument('webpage', metavar='url', type=str, help='url to check')
-parser.add_argument('seconds', metavar='secs', type=float, help='how many seconds between checks (float)')
-parser.add_argument('checkTime', metavar='check_time', type=float, help='how many minutes to check the webpage (float)')
 parser.add_argument('phoneTo', metavar='phone_out', type=str, help='phone to message updates to')
 parser.add_argument('phoneFrom', metavar='phone_in', type=str, help='your Twilio phone number')
 parser.add_argument('sid', metavar='account_sid', type=str, help='your Twilio SID')
 parser.add_argument('auth', metavar='auth_token', type=str, help='your Twilio Auth Token')
+parser.add_argument('--sec', metavar='secs', dest='seconds', type=float, default=10.0, help='modify how many seconds pass between checks (default 10s, float)')
+parser.add_argument('--dur', metavar='duration', dest='checkTime', type=float, default=1.0, help='modify how many minutes to check the webpage for (default 1min, float)')
 
 args = parser.parse_args()
 
