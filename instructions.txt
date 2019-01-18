@@ -1,0 +1,11 @@
+In case you read my assignment submission to the first link and then skip the rest, here are the instructions for running my program:
+
+Grab the "webscraper.py" file. Run in terminal using -h option to see the arguments you need to run it with (or manually edit the file to add in your own info). 
+
+In the event that you decide -h takes too much time, the syntax is as follows:
+
+python webscrape.py [url to check] [phone number to text to (needs the country code e.g. +1 for US)] [Twilio phone to text from (needs the country code e.g. +1 for US)] [Twilio SID to use] [Twilio Auth Token to use] [--sec   # of seconds between checks (default 10s, minimum 3s)] [--dur   duration in minutes to run the program for (default 1min, maximum 10min)]
+
+It will check only the first paragraph tag of a webpage. I was considering doing more of the webpage, but was afraid it might overflow memory due to the fact it's reading from and writing to a file.
+
+NOTE: running it will create 1 file called save.txt to store the website text in between runs
