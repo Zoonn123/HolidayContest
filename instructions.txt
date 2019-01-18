@@ -9,3 +9,5 @@ python webscrape.py [url to check] [phone number to text to (needs the country c
 It will check only the first paragraph tag of a webpage. I was considering doing more of the webpage, but was afraid it might overflow memory due to the fact it's reading from and writing to a file.
 
 NOTE: running it will create 1 file called save.txt to store the website text in between runs
+
+NOTE: requires the following Libraries: requests, bs4, twilio, threading (I believe that one is built in), argparse
